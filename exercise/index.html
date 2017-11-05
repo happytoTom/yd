@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css绘制图形</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+
+		}
+		div{
+			text-align: center;
+			margin-left: 50px;
+			margin-bottom: 20px;
+		}
+		/*正方形*/
+		#square{
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		/*矩形*/
+		#rectangle{
+			width: 200px;
+			height: 100px;
+			background: red;
+		}
+
+		/*圆型*/
+		#circle {
+			width: 100px;
+			height: 100px;
+
+			background: red;
+		}
+		.btns{
+			width: 150px;
+			height: 50px;
+			border: 1px solid #000;
+			overflow: hidden;
+			border-radius: 25px;
+		}
+		.btns span{
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			display: block;
+			float: left;
+			border: 1px solid #000;
+			text-align: center;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<!--正方形-->
+	<div id="square"></div>
+	<!--矩形-->
+	<div id="rectangle"></div>
+	<!--圆型-->
+	<div id="circle"></div>
+	<div class="btns">
+		<span>低</span>
+		<span>中</span>
+		<span>高</span>
+	</div>
+</body>
+</html>
