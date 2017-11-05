@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>css手</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.containe{
+			margin-left: 50%;
+			margin-top: 10%;
+		}
+		.hand{
+			width: 200px;
+			height: 150px;
+			background-color: red;
+			position: relative;
+		}
+		.figger{
+			width: 150px;
+			height: 35px;
+			background-color: yellow;
+			border-radius: 40px;
+			border: 1px solid red;
+			position: absolute;
+			margin-left: 50%;
+		}
+		.figger.finger01{
+			margin-top: -63px;
+			margin-left: 30%;
+			width: 100px;
+			transform:rotate(-70deg);
+			-ms-transform:rotate(-70deg); 	/* IE 9 */
+			-moz-transform:rotate(-70deg); 	/* Firefox */
+			-webkit-transform:rotate(-70deg); /* Safari 和 Chrome */
+			-o-transform:rotate(-70deg);
+		}
+		.figger.finger02{
+			margin-top: -17px;
+		}
+
+		.figger.finger03{
+			margin-top: 35px;
+		}
+
+		.figger.finger04{
+			margin-top: 87px;
+		}
+
+		.figger.finger05{
+			margin-top: 136px;
+		}
+	</style>
+</head>
+<body>
+	<div class="containe">
+		<div class="hand" id="thumb">
+			<div class="figger finger01"></div>
+			<div class="figger finger02"></div>
+			<div class="figger finger03"></div>
+			<div class="figger finger04"></div>
+			<div class="figger finger05"></div>
+		</div>
+	</div>
+	<span class="hide" id="animation"></span>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./src/addnum.js"></script>
+	<script src="https://cdn.bootcss.com/systemjs/0.20.19/system.js"></script>
+<!-- 	<script type="text/javascript" src="scripts/thumb.es.js"></script>
+ -->	<script type="text/javascript">
+		SystemJS.config({
+			baseURL: './scripts'
+		});
+
+		SystemJS.import('index.es.js').then(function(m){
+			$.extend({
+				thumb:m.default.Thumb
+			})
+			callback();
+		});
+
+		function callback(){
+			var f = new $.thumb(0,$("#thumb"));
+			f.clickAction();
+		}
+	</script>
+</body>
+</html>
