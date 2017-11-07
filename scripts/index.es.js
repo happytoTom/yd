@@ -27,14 +27,14 @@ var PraiseButton = function () {
 
             this.element.click(function () {
                 if (_this.num < 10) {
-                    _this.element.css('-webit-filter', 'grayscale(0)');
+                    _this.element.css('-webkit-filter', 'grayscale(0)');
                     $("#animation").addClass('num');
                     _this.num = add(_this.num);
                     setTimeout(function () {
                         $("#animation").removeClass("num");
-                    });
+                    }, 1000);
                 } else {
-                    _this.element.css('-webit-filter', 'grayscale(1)');
+                    _this.element.css('-webkit-filter', 'grayscale(1)');
                     _this.num = 0;
                 }
                 console.log(_this.num);

@@ -1,2 +1,2 @@
-第一周作业:
-1
+运行server.js启动服务:
+	命令 node server.js,访问路径 http://localhost:8888/hand.html

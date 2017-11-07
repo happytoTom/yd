@@ -6,14 +6,14 @@ class PraiseButton {
     clickAction() {
         this.element.click(() => {
             if (this.num < 10) {
-                this.element.css('-webit-filter', 'grayscale(0)');
+                this.element.css('-webkit-filter','grayscale(0)');
                 $("#animation").addClass('num');
                 this.num = add(this.num);
                 setTimeout(function() {
                     $("#animation").removeClass("num");
-                });
+                },1000);
             } else {
-                this.element.css('-webit-filter', 'grayscale(1)');
+                this.element.css('-webkit-filter','grayscale(1)');
                 this.num = 0;
             }
             console.log(this.num);
