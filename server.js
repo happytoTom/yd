@@ -1,6 +1,6 @@
 var http = require('http');
 var fs = require('fs'); // 文件读取模块
-var documentRoot = '/Volumes/tangtao/Up/yd/work/01'; // 需要访问文件 存放目录
+var documentRoot = './'; // 需要访问文件 存放目录
 
 var server = http.createServer(function(req,res){
 	var url = req.url;
